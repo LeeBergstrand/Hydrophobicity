@@ -1,78 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!--
-		A web app that allows one to check the hydrophobicity of a protien sequence.
-		Authors: Lee Bergstrand
-		Date: 13-01-18
-	-->
-	<title> Hydrophobicity </title>
-	
-	<!--Metadata-->
-	<meta charset="UTF-8" />
-	<meta name="author" content="Lee Bergstrand" />
-	<meta name="keywords" content="tru,biology,thompson rivers university,microbiology,bioremediation" />
-	<meta name="description" content="Allows one to check the hydrophobicity of a protien sequence" />
-
-	<!--External Style Sheets-->
-	<link href="master.css" rel="stylesheet" type="text/css" />
-	<!--External Scripts-->
-</head>	
-
-<body>
-	<header>
-		<h1>Hydrophobicity</h1>
-	</header>
-	
-	<!-- Contains chart and related buttons -->
-	<section id="hydroChart">
-		<!-- new sequnece button -->
-		<div id="newSeq">
-		</div>
+	<head>
+		<!--
+			A web app that allows one to check the hydrophobicity of a protien sequence.
+			Authors: Lee Bergstrand
+			Date: 13-01-18
+		-->
+		<title> Hydrophobicity </title>
 		
-		<!-- Ph Buttons Select pH (2 or 7) -->		
-		<div id="phSelect">
-			<!-- Selects pH of 2 -->			
-			<div id="ph2">
-			pH2
+		<!--Metadata-->
+		<meta charset="UTF-8" />
+		<meta name="author" content="Lee Bergstrand" />
+		<meta name="keywords" content="tru,biology,thompson rivers university,microbiology,bioremediation" />
+		<meta name="description" content="Allows one to check the hydrophobicity of a protien sequence" />
+	
+		<!--External Style Sheets-->
+		<link href="master.css" rel="stylesheet" type="text/css" />
+		<!--External Scripts-->
+	</head>	
+	
+	<body>
+		<header>
+			<h1>Hydrophobicity</h1>
+		</header>
+		
+		<!-- Contains chart and related buttons -->
+		<section id="hydroChart">
+			<!-- new sequnece button -->
+			<div id="newSeq">
 			</div>
 			
-			<!-- Selects pH of 7 -->			
-			<div id="ph7">
-			pH7
+			<!-- Ph Buttons Select pH (2 or 7) -->		
+			<div id="phSelect">
+				<!-- Selects pH of 2 -->			
+				<div id="ph2">
+				pH2
+				</div>
+				
+				<!-- Selects pH of 7 -->			
+				<div id="ph7">
+				pH7
+				</div>
 			</div>
-		</div>
+			
+			<canvas id="myChart" width="400" height="400"></canvas>		
+		</section>
 		
-		<canvas id="myChart" width="400" height="400"></canvas>		
-	</section>
-	
-	<!-- Contains file selection box and related buttons -->
-	<section id="foreground">
-		<div id="fileArea">
-			<div id="dropZone">Drop files here</div>
-			<output id="list"></output>
-			<input type="file" id="files" name="files[]" multiple />
-			<output id="list2"></output>
-		</div>
-	</section>
-	
-	<!-- Contains references and related author information -->
-	<footer id="footer">
-		<p id="cite">
-			<cite>Amino Acids Reference Chart. (n.d.). Sigma-Aldrich. Retrieved January 20, 2014, from http://www.sigmaaldrich.com/life-science/metabolomics/learning-center/amino-acid-reference-chart.html</cite>
-		</p>
+		<!-- Contains file selection box and related buttons -->
+		<section id="foreground">
+			<div id="fileArea">
+				<div id="dropZone">Drop files here</div>
+				<output id="list"></output>
+				<input type="file" id="files" name="files[]" multiple />
+				<output id="list2"></output>
+			</div>
+		</section>
 		
-		<div id="testFile">
-		<img src="http://icons.iconarchive.com/icons/gakuseisean/radium/256/file-icon.png" id="fileLogo" alt="File:">
-		testSeq.fasta
-		</div>
-		
-		<p>
-		Try it out with the test file above!
-		</p>
-		
-
-	</footer>
-	
-</body>
+		<!-- Contains references and related author information -->
+		<footer id="footer">
+			<p id="cite">
+				<cite>Amino Acids Reference Chart. (n.d.). Sigma-Aldrich. Retrieved January 20, 2014, from http://www.sigmaaldrich.com/life-science/metabolomics/learning-center/amino-acid-reference-chart.html</cite>
+			</p>
+			
+			<div id="testFile">
+			<img src="http://icons.iconarchive.com/icons/gakuseisean/radium/256/file-icon.png" id="fileLogo" alt="File:">
+			<a href="./testSeq.fasta">testSeq.fasta</a>
+			</div>
+			
+			<p>
+			Try it out with the test file above!
+			</p>
+		</footer>
+	</body>
 </html>
