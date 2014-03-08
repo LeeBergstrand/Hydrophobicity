@@ -1,0 +1,33 @@
+/*
+	Hydrophobicity Chart Generator.
+	Authors: Lee Bergstrand 
+	Date: 14-01-20
+*/
+
+body 
+{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:#b6e7f1;
+}
+
+#myChart
+{
+	background-color:#ffffff;
+}
+
+#dropZone
+{
+	background-color: white;
+	border: 1px dashed gray;
+	padding: 2px;
+	margin: 2px;
+}
+
+#fileLogo
+{
+	height: 40px;
+}
+
+
