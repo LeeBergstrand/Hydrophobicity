@@ -9,7 +9,7 @@ Tools to be utilized:
 
 Reference:
 
-[Reading files in JavaScript using the File APIs]http://www.html5rocks.com/en/tutorials/file/dndfiles/
+[Reading files in JavaScript using the File APIs](http://www.html5rocks.com/en/tutorials/file/dndfiles/)
 
 Concept:
 
