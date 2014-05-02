@@ -1,5 +1,5 @@
 /*************************************************************************\
-| Javascripts for Hydrobobicity                                           |
+| Javascript for Hydrobobicity                                           |
 | Date: 13-04-29                                                          |
 | Created by: Lee Bergstrand			                          |
 | File IO code from http://www.html5rocks.com/en/tutorials/file/dndfiles/ |
