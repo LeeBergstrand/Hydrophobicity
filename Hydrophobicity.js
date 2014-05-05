@@ -20,7 +20,17 @@ function handleFileSelect(event)
 {
 	event.stopPropagation();
 	event.preventDefault();
-	var files = event.dataTransfer.files; // FileList object.
+	
+	var file = event.dataTransfer.files[0]; // FileList object.
+
+	var reader = new FileReader();
+	reader.onload = function(e) 
+	{
+		var text = reader.result;
+		alert(text)
+	}
+	reader.readAsText(file);
+	
 }
 //-------------------------------------------------------------------------------------------
 function handleDragOver(event) 
@@ -33,13 +43,12 @@ function handleDragOver(event)
 //===========================================================================================
 // Onload Code
 //===========================================================================================
-
-function onLoad(event) 
+function onLoad() 
 {
 	// Check for the various File API support.
 	if (window.File && window.FileReader && window.FileList && window.Blob) 
 	{
-	  // Great success! All the File APIs are supported.
+	  	// Great success! All the File APIs are supported.
 	} 
 	else 
 	{
