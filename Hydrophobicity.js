@@ -13,8 +13,6 @@
 
 
 
-
-
 //===========================================================================================
 // Funtions:
 //===========================================================================================
@@ -36,22 +34,23 @@ function handleDragOver(event)
 // Onload Code
 //===========================================================================================
 
-
-
-// Check for the various File API support.
-if (window.File && window.FileReader && window.FileList && window.Blob) 
+function onLoad(event) 
 {
-  // Great success! All the File APIs are supported.
-} 
-else 
-{
-	alert('The File APIs are not fully supported in this browser.');
+	// Check for the various File API support.
+	if (window.File && window.FileReader && window.FileList && window.Blob) 
+	{
+	  // Great success! All the File APIs are supported.
+	} 
+	else 
+	{
+		alert('The File APIs are not fully supported in this browser.');
+	}
+	
+	document.getElementById('files').addEventListener('change', handleFileSelect, false);
+	
+	var dropZone = document.getElementById('dropZone');
+	dropZone.addEventListener('dragover', handleDragOver, false);
+	dropZone.addEventListener('drop', handleFileSelect, false);
 }
-
-document.getElementById('files').addEventListener('change', handleFileSelect, false);
-var dropZone = document.getElementById('dropZone');
-dropZone.addEventListener('dragover', handleDragOver, false);
-dropZone.addEventListener('drop', handleFileSelect, false);
-
 
 
