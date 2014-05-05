@@ -36,6 +36,8 @@ function handleDragOver(event)
 // Onload Code
 //===========================================================================================
 
+
+
 // Check for the various File API support.
 if (window.File && window.FileReader && window.FileList && window.Blob) 
 {
@@ -47,8 +49,9 @@ else
 }
 
 document.getElementById('files').addEventListener('change', handleFileSelect, false);
-
-// Setup the dnd listeners.
 var dropZone = document.getElementById('dropZone');
 dropZone.addEventListener('dragover', handleDragOver, false);
 dropZone.addEventListener('drop', handleFileSelect, false);
+
+
+
