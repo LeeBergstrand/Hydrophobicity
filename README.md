@@ -2,12 +2,12 @@ Hydrophobicity
 ==============
 A example of using the latest web standards for easy visualiztion of the changing hydrophobicity of amino acid chains.
 
-Tools to be utilized:
+##### Tools to be utilized:
 
 - HTML5/Javascript file IO.
 - Graph.js
 
-Reference:
+##### Reference:
 
 [Reading files in JavaScript using the File APIs](http://www.html5rocks.com/en/tutorials/file/dndfiles/)
 
@@ -15,7 +15,7 @@ Reference:
 
 ![Amino Acid Hydrophobicity](http://www.sigmaaldrich.com/content/dam/sigma-aldrich/life-science/biochemicals/migrationbiochemicals1/2nd-graph.gif)
 
-Concept:
+##### Concept:
 
 ![Concept Image One](https://raw.githubusercontent.com/LeeBergstrand/Hydrophobicity/master/Concept/ConceptOne.jpg)
 
