@@ -11,8 +11,10 @@ Reference:
 
 [Reading files in JavaScript using the File APIs](http://www.html5rocks.com/en/tutorials/file/dndfiles/)
 
+![Amino Acid Hydrophobicity](http://www.sigmaaldrich.com/content/dam/sigma-aldrich/life-science/biochemicals/migrationbiochemicals1/2nd-graph.gif)
+
 Concept:
 
-![Concept Image One] (https://raw.githubusercontent.com/LeeBergstrand/Hydrophobicity/master/Concept/ConceptOne.jpg)
+![Concept Image One](https://raw.githubusercontent.com/LeeBergstrand/Hydrophobicity/master/Concept/ConceptOne.jpg)
 
-![Concept Image Two] (https://raw.githubusercontent.com/LeeBergstrand/Hydrophobicity/master/Concept/ConceptTwo.jpg)
+![Concept Image Two](https://raw.githubusercontent.com/LeeBergstrand/Hydrophobicity/master/Concept/ConceptTwo.jpg)
