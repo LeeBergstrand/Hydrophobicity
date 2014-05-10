@@ -1,17 +1,16 @@
 /*************************************************************************\
 | Javascript for Hydrobobicity                                            |
 | Date: 13-04-29                                                          |
-| Created by: Lee Bergstrand			                                  |
+| Created by: Lee Bergstrand			                          |
 | File IO code from http://www.html5rocks.com/en/tutorials/file/dndfiles/ |
 \*************************************************************************/
 
 //===========================================================================================
 // Global Variables
 //===========================================================================================
-var FastaString = ""
-var FastaHeader = ""
-var AAseq = []
-var table = { one: [1,10,5], two: [2], three: [3, 30, 300] }
+var FastaString = "";
+var FastaHeader = "";
+var AAseq = [];
 var AATablePh2 = { 	A:  47,
 					R: -26,
 					N: -41,
@@ -106,25 +105,25 @@ function parseFile(file)
 	reader.onload = function(e) 
 	{
 		FastaString = reader.result;
-		alert(FastaString)
-		FastaExtraction(FastaString) 
+		alert(FastaString);
+		FastaExtraction(FastaString); 
 	}
 	reader.readAsText(file);
 }
 //-------------------------------------------------------------------------------------------
 function FastaExtraction(FastaString) 
 {
-	var FastaSeq = ""
-	var FastaComponents = FastaString.split(/\n/g)
+	var FastaSeq = "";
+	var FastaComponents = FastaString.split(/\n/g);
 
-	FastaHeader = FastaComponents[0]
-	console.log(FastaHeader)
+	FastaHeader = FastaComponents[0];
+	console.log(FastaHeader);
 	for(var x = 1; x < FastaComponents.length; x++)
 	{
 		FastaSeq += FastaComponents[x];
 	}
-	AAseq = FastaSeq.toUpperCase().split('')
-	console.log(AAseq)
+	AAseq = FastaSeq.toUpperCase().split('');
+	console.log(AAseq);
 }
 //===========================================================================================
 // Onload Code
@@ -147,5 +146,4 @@ function onLoad()
 	dropZone.addEventListener('dragover', handleDragOver, false);
 	dropZone.addEventListener('drop', handleDropzoneFileSelect, false);
 }
-
 
