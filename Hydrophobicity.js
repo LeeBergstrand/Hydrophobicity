@@ -33,7 +33,7 @@ var AATablePh2 = { 	A:  47,
 					T:  13,
 					W:  84,
 					Y:  49,
-					V:  79, }
+					V:  79 }
 
 var AATablePh7 = { 	A:  41,
 					R: -14,
@@ -54,7 +54,7 @@ var AATablePh7 = { 	A:  41,
 					T:  13,
 					W:  97,
 					Y:  63,
-					V:  76, }
+					V:  76 }
 					
 var AAOneLetterToThreeLetter = { 	A: 'Ala',
 									R: 'Arg',
@@ -75,7 +75,7 @@ var AAOneLetterToThreeLetter = { 	A: 'Ala',
 									T: 'Thr',
 									W: 'Trp',
 									Y: 'Tyr',
-									V: 'Val', }
+									V: 'Val' }
 					
 //===========================================================================================
 // Funtions:
