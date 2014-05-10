@@ -11,6 +11,8 @@
 var FastaString = ""
 var FastaHeader = ""
 var FastaSeq    = ""
+var AAseq = []
+var AATable = {}
 
 //===========================================================================================
 // Funtions:
