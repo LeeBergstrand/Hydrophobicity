@@ -12,7 +12,8 @@ var FastaString = ""
 var FastaHeader = ""
 var FastaSeq    = ""
 var AAseq = []
-var AATable = {}
+var AATablePh2 = {}
+var AATablePh7 = {}
 
 //===========================================================================================
 // Funtions:
