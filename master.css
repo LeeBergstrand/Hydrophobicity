@@ -12,10 +12,10 @@ body
 	background-color:#b6e7f1;
 }
 
-#myChart
+#canvasContainer
 {
 	background-color:#ffffff;
-	width: 100%;
+	width: 100%; 
 	height: 600px;
 }
 
