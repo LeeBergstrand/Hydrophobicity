@@ -11,6 +11,7 @@
 var FastaString = "";
 var FastaHeader = "";
 var AAseq = [];
+var AALabels = [];
 var AAHydrobobityPh2 = [];
 var AAHydrobobityPh7 = [];
 var AATablePh2 = { 	A:  47,
@@ -109,7 +110,8 @@ function parseFile(file)
 		FastaString = reader.result;
 		alert(FastaString);
 		FastaExtraction(FastaString);
-		generateAAHydrobobityArrays(AAseq); 
+		generateAAHydrobobityArrays(AAseq);
+		generateChart(); 
 	}
 	reader.readAsText(file);
 }
@@ -137,18 +139,47 @@ function generateAAHydrobobityArrays(AAseq)
 		{
 			AAHydrobobityPh2.push(AATablePh2[AAseq[x]]);
 			AAHydrobobityPh7.push(AATablePh7[AAseq[x]]);
+			AALabels.push(AAOneLetterToThreeLetter[AAseq[x]])
 		}
 		else
 		{
 			alert("Ambiguous Amino Acid Found!");
 			AAHydrobobityPh2.push(0);
 			AAHydrobobityPh7.push(0);
+			AALabels.push("?");
 		}
-			
 	}
 	console.log(AAHydrobobityPh2);
 	console.log(AAHydrobobityPh7);
+	console.log(AALabels);
 }
+//-------------------------------------------------------------------------------------------
+function generateChart()
+{
+	var data = {
+			labels : AALabels,
+			datasets : [
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,1)",
+				pointColor : "rgba(220,220,220,1)",
+				pointStrokeColor : "#fff",
+				data : AAHydrobobityPh2
+			},
+			{
+				fillColor : "rgba(151,187,205,0.5)",
+				strokeColor : "rgba(151,187,205,1)",
+				pointColor : "rgba(151,187,205,1)",
+				pointStrokeColor : "#fff",
+				data : AAHydrobobityPh7
+			}
+		]
+	}
+	//Get the context of the canvas element we want to select
+	var ctx = document.getElementById("myChart").getContext("2d");
+	var myNewChart = new Chart(ctx).Line(data);
+}
+
 //===========================================================================================
 // Onload Code
 //===========================================================================================
