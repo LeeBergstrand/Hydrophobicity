@@ -10,7 +10,6 @@
 //===========================================================================================
 var FastaString = ""
 var FastaHeader = ""
-var FastaSeq    = ""
 var AAseq = []
 var table = { one: [1,10,5], two: [2], three: [3, 30, 300] }
 var AATablePh2 = { 	A:  47,
@@ -115,6 +114,7 @@ function parseFile(file)
 //-------------------------------------------------------------------------------------------
 function FastaExtraction(FastaString) 
 {
+	var FastaSeq = ""
 	var FastaComponents = FastaString.split(/\n/g)
 
 	FastaHeader = FastaComponents[0]
@@ -123,7 +123,8 @@ function FastaExtraction(FastaString)
 	{
 		FastaSeq += FastaComponents[x];
 	}
-	console.log(FastaSeq)
+	AAseq = FastaSeq.toUpperCase().split('')
+	console.log(AAseq)
 }
 //===========================================================================================
 // Onload Code
