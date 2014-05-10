@@ -11,6 +11,8 @@
 var FastaString = "";
 var FastaHeader = "";
 var AAseq = [];
+var AAHydrobobityPh2 = [];
+var AAHydrobobityPh7 = [];
 var AATablePh2 = { 	A:  47,
 					R: -26,
 					N: -41,
@@ -106,7 +108,8 @@ function parseFile(file)
 	{
 		FastaString = reader.result;
 		alert(FastaString);
-		FastaExtraction(FastaString); 
+		FastaExtraction(FastaString);
+		generateAAHydrobobityArrays(AAseq); 
 	}
 	reader.readAsText(file);
 }
@@ -124,6 +127,27 @@ function FastaExtraction(FastaString)
 	}
 	AAseq = FastaSeq.toUpperCase().split('');
 	console.log(AAseq);
+}
+//-------------------------------------------------------------------------------------------
+function generateAAHydrobobityArrays(AAseq) 
+{
+	for(var x = 1; x < AAseq.length; x++)
+	{
+		if (AAseq[x] in AATablePh2)
+		{
+			AAHydrobobityPh2.push(AATablePh2[AAseq[x]]);
+			AAHydrobobityPh7.push(AATablePh7[AAseq[x]]);
+		}
+		else
+		{
+			alert("Ambiguous Amino Acid Found!");
+			AAHydrobobityPh2.push(0);
+			AAHydrobobityPh7.push(0);
+		}
+			
+	}
+	console.log(AAHydrobobityPh2);
+	console.log(AAHydrobobityPh7);
 }
 //===========================================================================================
 // Onload Code
