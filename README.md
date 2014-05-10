@@ -17,6 +17,6 @@ A example of using the latest web standards for easy visualiztion of the changin
 
 ##### Concept:
 
-![Concept Image One](https://raw.githubusercontent.com/LeeBergstrand/Hydrophobicity/master/Concept/ConceptOne.jpg)
-
 ![Concept Image Two](https://raw.githubusercontent.com/LeeBergstrand/Hydrophobicity/master/Concept/ConceptTwo.jpg)
+
+![Concept Image One](https://raw.githubusercontent.com/LeeBergstrand/Hydrophobicity/master/Concept/ConceptOne.jpg)
