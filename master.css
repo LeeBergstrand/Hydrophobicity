@@ -40,11 +40,17 @@ body
 
 #dropZone span
 {
-	display: block;
+	display: inline-block;
 	font-size: 150%;
 	font-weight: bold;
 	margin-left:auto;
 	margin-right:auto;
+	width:100%;
+}
+
+#dropZone input
+{
+	display: inline-block;
 	width:100%;
 }
 
