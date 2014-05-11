@@ -171,9 +171,10 @@ function generateChart()
 	}
 	//Get the context of the canvas element we want to select
 	var ctx = $("#myChart")[0].getContext("2d");
-	ctx.canvas.width = AAseq.length * 10.5;
-	ctx.canvas.height = parseInt(parseInt($("#canvasContainer").css("height")) * 0.98);
-	var myNewChart = new Chart(ctx).Line(data);
+	ctx.canvas.width = AAseq.length * 10;
+	ctx.canvas.height = parseInt($("#canvasContainer").css("height")) * 0.98;
+	var options = {scaleLineWidth: 0.5};
+	var myNewChart = new Chart(ctx).Line(data, options);
 }
 
 //===========================================================================================
