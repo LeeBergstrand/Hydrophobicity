@@ -9,7 +9,38 @@ body
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color:#b6e7f1;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#phSelect
+{
+	width: 70%; 
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+#phSelect div
+{
+	display: inline-block;
+	font-weight: bold;
+	font-size: 120%;
+	border: 3px solid black;
+	text-align: center;
+	padding: 6px;
+	border-radius: 10px;
+	width: 20%;
+}
+
+#ph2
+{
+	background-color: #28aedb
+}
+
+#ph7
+{
+	background-color: #dc293b
 }
 
 #canvasContainer
@@ -20,6 +51,7 @@ body
 	overflow: auto;
 	border: 5px solid black;
 	border-radius: 10px;
+	text-align: center;
 }
 
 #dropZone
@@ -33,6 +65,7 @@ body
 	width:70%;
 	height: 400px;
 	text-align: center;
+	display: flex;
 	display: -webkit-flex;
 	align-items: center;
 	-webkit-align-items: center;
