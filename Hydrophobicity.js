@@ -99,10 +99,15 @@ function handleDragOver(event)
 function parseFile(file) 
 {
 	var reader = new FileReader();
+
+	AAseq = [];
+	AALabels = [];
+	AAHydrobobityPh2 = [];
+	AAHydrobobityPh7 = [];
+
 	reader.onload = function(e) 
 	{
 		FastaString = reader.result;
-		//alert(FastaString);
 		FastaExtraction(FastaString);
 		generateAAHydrobobityArrays(AAseq);
 		generateChart(); 
@@ -170,10 +175,13 @@ function generateChart()
 		]
 	}
 	//Get the context of the canvas element we want to select
-	var ctx = $("#myChart")[0].getContext("2d");
-	ctx.canvas.width = AAseq.length * 10;
-	ctx.canvas.height = parseInt($("#canvasContainer").css("height")) * 0.95;
-	var myNewChart = new Chart(ctx).Line(data);
+	var myChart = $("#myChart")[0];
+	var ctx = myChart.getContext("2d");
+	myChart.width = AAseq.length * 10;
+	myChart.height = parseInt($("#canvasContainer").css("height")) * 0.95;
+	ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+	var options = {animation: false};
+	var myNewChart = new Chart(ctx).Line(data, options);
 }
 
 //===========================================================================================
