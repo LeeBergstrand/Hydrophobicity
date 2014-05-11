@@ -102,7 +102,7 @@ function parseFile(file)
 	reader.onload = function(e) 
 	{
 		FastaString = reader.result;
-		alert(FastaString);
+		//alert(FastaString);
 		FastaExtraction(FastaString);
 		generateAAHydrobobityArrays(AAseq);
 		generateChart(); 
