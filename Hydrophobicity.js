@@ -177,7 +177,7 @@ function generateChart()
 	//Get the context of the canvas element we want to select
 	var myChart = $("#myChart")[0];
 	var ctx = myChart.getContext("2d");
-	myChart.width = AAseq.length * 10;
+	myChart.width = AAseq.length * 25;
 	myChart.height = parseInt($("#canvasContainer").css("height")) * 0.95;
 	ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 	var options = {animation: false};
