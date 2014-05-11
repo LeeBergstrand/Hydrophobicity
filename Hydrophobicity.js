@@ -80,12 +80,6 @@ var AAOneLetterToThreeLetter = { 	A: 'Ala',
 //===========================================================================================
 // Funtions:
 //===========================================================================================
-function handleFileSelect(event) 
-{	
-	var file = event.target.files[0]; // FileList object.
-	parseFile(file);
-}
-//-------------------------------------------------------------------------------------------
 function handleDropzoneFileSelect(event) 
 {
 	event.stopPropagation();
@@ -196,8 +190,6 @@ function onLoad()
 	{
 		alert('The File APIs are not fully supported in this browser.');
 	}
-	
-	document.getElementById('files').addEventListener('change', handleFileSelect, false);
 	
 	var dropZone = document.getElementById('dropZone');
 	dropZone.addEventListener('dragover', handleDragOver, false);
