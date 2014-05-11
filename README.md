@@ -5,7 +5,7 @@ A example of using the latest web standards for easy visualiztion of the changin
 ##### Tools to be utilized:
 
 - HTML5/Javascript file IO.
-- Graph.js
+- Chart.js
 
 ##### Reference:
 
