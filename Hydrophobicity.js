@@ -170,9 +170,9 @@ function generateChart()
 		]
 	}
 	//Get the context of the canvas element we want to select
-	var ctx = document.getElementById("myChart").getContext("2d");
+	var ctx = $("#myChart").getContext("2d");
 	ctx.canvas.width = AAseq.length * 10.5;
-	ctx.canvas.height = parseInt(window.getComputedStyle(ctx.canvas.parentElement).height) * 0.98;
+	ctx.canvas.height = parseInt(parseInt($("#canvasContainer").css("width")) * 0.98);
 	var myNewChart = new Chart(ctx).Line(data);
 }
 
@@ -191,7 +191,7 @@ function onLoad()
 		alert('The File APIs are not fully supported in this browser.');
 	}
 	
-	var dropZone = document.getElementById('dropZone');
+	var dropZone = $("#dropZone")[0];
 	dropZone.addEventListener('dragover', handleDragOver, false);
 	dropZone.addEventListener('drop', handleDropzoneFileSelect, false);
 }
