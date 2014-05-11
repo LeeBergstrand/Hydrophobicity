@@ -177,6 +177,8 @@ function generateChart()
 	}
 	//Get the context of the canvas element we want to select
 	var ctx = document.getElementById("myChart").getContext("2d");
+	ctx.canvas.width = AAseq.length * 10.5;
+	ctx.canvas.height = ctx.canvas.parentElement.height;
 	var myNewChart = new Chart(ctx).Line(data);
 }
 
