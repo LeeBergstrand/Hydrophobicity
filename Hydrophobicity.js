@@ -12,6 +12,8 @@ var FastaString = "";
 var FastaHeader = "";
 var AAseq = [];
 var AALabels = [];
+var pH2Enabled = true;
+var pH7Enabled = true;
 var AAHydrobobityPh2 = [];
 var AAHydrobobityPh7 = [];
 var AATablePh2 = { 	A:  47,
@@ -155,31 +157,44 @@ function generateAAHydrobobityArrays(AAseq)
 //-------------------------------------------------------------------------------------------
 function generateChart()
 {
-	var data = {
-			labels : AALabels,
-			datasets : [
-			{
-				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(220,220,220,1)",
-				pointColor : "rgba(220,220,220,1)",
-				pointStrokeColor : "#fff",
-				data : AAHydrobobityPh2
-			},
-			{
-				fillColor : "rgba(151,187,205,0.5)",
-				strokeColor : "rgba(151,187,205,1)",
-				pointColor : "rgba(151,187,205,1)",
-				pointStrokeColor : "#fff",
-				data : AAHydrobobityPh7
-			}
-		]
-	}
-	//Get the context of the canvas element we want to select
+	// Get the context of the canvas element we want to select
 	var myChart = $("#myChart")[0];
 	var ctx = myChart.getContext("2d");
+
+	// Reset and clear canvas
 	myChart.width = AAseq.length * 25;
 	myChart.height = parseInt($("#canvasContainer").css("height")) * 0.95;
 	ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+	if (!(pH2Enabled || pH7Enabled)) {
+		return; // No need to bother with the rest if no datasets are enabled
+	}
+
+	var data = {
+			labels : AALabels,
+			datasets : []
+	}
+
+	// Set enabled chart datasets
+	if (pH2Enabled) {
+		data.datasets[data.datasets.length] = {
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,1)",
+							pointColor : "rgba(220,220,220,1)",
+							pointStrokeColor : "#fff",
+							data : AAHydrobobityPh2
+						      };
+	}
+
+	if (pH7Enabled) {
+		data.datasets[data.datasets.length] = {
+							fillColor : "rgba(151,187,205,0.5)",
+							strokeColor : "rgba(151,187,205,1)",
+							pointColor : "rgba(151,187,205,1)",
+							pointStrokeColor : "#fff",
+							data : AAHydrobobityPh7
+						      };
+	}
+
 	var options = {animation: false};
 	var myNewChart = new Chart(ctx).Line(data, options);
 }
@@ -204,3 +219,16 @@ function onLoad()
 	dropZone.addEventListener('drop', handleDropzoneFileSelect, false);
 }
 
+//===========================================================================================
+// Other functions?
+//===========================================================================================
+function toggleDataset(dataset) {
+	if (dataset == "pH2") {
+		pH2Enabled = !pH2Enabled;
+	}
+	else if (dataset == "pH7") {
+		pH7Enabled = !pH7Enabled;
+	}
+
+	generateChart();
+}
