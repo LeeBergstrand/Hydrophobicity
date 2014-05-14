@@ -103,17 +103,6 @@ function generateAAHydrobobityArrays(AAseq)
 	console.log(AALabels);
 }
 //-------------------------------------------------------------------------------------------
-function toggleDataset(dataset) {
-	if (dataset == "pH2") {
-		pH2Enabled = !pH2Enabled;
-	}
-	else if (dataset == "pH7") {
-		pH7Enabled = !pH7Enabled;
-	}
-
-	generateChart();
-}
-//-------------------------------------------------------------------------------------------
 function generateChart()
 {
 	// Get the context of the canvas element we want to select
@@ -157,7 +146,17 @@ function generateChart()
 	var options = {animation: false};
 	var myNewChart = new Chart(ctx).Line(data, options);
 }
+//-------------------------------------------------------------------------------------------
+function toggleDataset(dataset) {
+	if (dataset == "pH2") {
+		pH2Enabled = !pH2Enabled;
+	}
+	else if (dataset == "pH7") {
+		pH7Enabled = !pH7Enabled;
+	}
 
+	generateChart();
+}
 //===========================================================================================
 // Onload Code
 //===========================================================================================
