@@ -150,9 +150,17 @@ function generateChart()
 function toggleDataset(dataset) {
 	if (dataset == "pH2") {
 		pH2Enabled = !pH2Enabled;
+		if (pH2Enabled)
+			$("#ph2").css('box-shadow', 'inset 3px 4px 8px black');
+		else
+			$("#ph2").css('box-shadow', '3px 4px 8px black');
 	}
 	else if (dataset == "pH7") {
 		pH7Enabled = !pH7Enabled;
+		if (pH7Enabled)
+			$("#ph7").css('box-shadow', 'inset 3px 4px 8px black');
+		else
+			$("#ph7").css('box-shadow', '3px 4px 8px black');	
 	}
 
 	generateChart();
