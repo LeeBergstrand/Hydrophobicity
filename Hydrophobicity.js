@@ -17,15 +17,15 @@ var pH7Enabled = true;
 var AAHydrobobityPh2 = [];
 var AAHydrobobityPh7 = [];
 
-var AATablePh2 = {A:47, R:-26, N:-41, D:-18, C:52, Q:-18, E:8, G:0, H: -42, I:100, L:100, K:-37, M:74, F:92,     
-                  P:-46, S:-7, T:13, W:84, Y:49, V:79}
+var AATablePh2 = {A: 47, R: -26, N: -41, D: -18, C: 52, Q: -18, E: 8, G: 0, H: -42, I: 100, L: 00, K: -37, M: 74, F: 92,     
+                  P: -46, S: -7, T: 13, W: 84, Y: 49, V: 79}
 
-var AATablePh7 = {A:41, R:-14, N:-28, D:-55, C:49, Q:-10, E:-31, G:0, H:8, I:99, L:97, K:-23, M:74, F:100, 
+var AATablePh7 = {A: 41, R: -14, N: -28, D: -55, C: 49, Q: -10, E: -31, G: 0, H: 8, I: 99, L: 97, K: -23, M: 74, F: 100, 
                   P:-46, S:-5, T:13, W:97, Y:63, V:76}
 					
-var AAOneLetterToThreeLetter = {A:'Ala', R:'Arg', N:'Asn', D:'Asp', C:'Cys', Q:'Gln', E:'Glu', G:'Gly',
-                                H:'His', I:'Ile', L:'Leu', K:'Lys', M:'Met', F:'Phe', P:'Pro', S:'Ser', 
-                                T:'Thr', W:'Trp', Y:'Tyr', V:'Val'}
+var AAOneLetterToThreeLetter = {A: 'Ala', R: 'Arg', N: 'Asn', D: 'Asp', C: 'Cys', Q: 'Gln', E: 'Glu', G: 'Gly',
+                                H: 'His', I: 'Ile', L: 'Leu', K: 'Lys', M: 'Met', F: 'Phe', P: 'Pro', S: 'Ser', 
+                                T: 'Thr', W: 'Trp', Y: 'Tyr', V: 'Val'}
 					
 //===========================================================================================
 // Funtions:
